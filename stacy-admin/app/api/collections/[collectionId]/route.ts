@@ -16,7 +16,7 @@ export const GET = async (
 
     if (!collection) {
       return new NextResponse(
-        JSON.stringify({ message: "Collection not found" }),
+        JSON.stringify({ message: "Collection not found 😟" }),
         { status: 404 }
       );
     }
@@ -44,7 +44,7 @@ export const POST = async (
     let collection = await Collection.findById(params.collectionId);
 
     if (!collection) {
-      return new NextResponse("Collection not found", { status: 404 });
+      return new NextResponse("Collection not found 😟", { status: 404 });
     }
 
     const { title, description, image } = await req.json();
