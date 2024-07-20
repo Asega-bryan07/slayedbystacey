@@ -2,18 +2,14 @@
 
 import {
   Command,
-  CommandDialog,
-  CommandEmpty,
   CommandGroup,
   CommandInput,
   CommandItem,
-  CommandList,
-  CommandSeparator,
-  CommandShortcut,
 } from "@/components/ui/command";
 import { useState } from "react";
 import { Badge } from "../ui/badge";
 import { X } from "lucide-react";
+import { Button } from "../ui/button";
 
 interface MultiSelectProps {
   placeholder: string;
@@ -51,9 +47,9 @@ const MultiSelect: React.FC<MultiSelectProps> = ({
         {selected.map((collection) => (
           <Badge key={collection._id}>
             {collection.title}
-            <button type="button" className="ml-1 hover:text-red-1" onClick={() => onRemove(collection._id)}>
+            <Button type="button" className="ml-1 hover:text-red-1" onClick={() => onRemove(collection._id)}>
               <X className="h-3 w-3" />
-            </button>
+            </Button>
           </Badge>
         ))}
 
