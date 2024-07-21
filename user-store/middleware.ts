@@ -1,9 +1,11 @@
-import { clerkMiddleware } from "@clerk/nextjs/server";
- 
+import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
+
+const isPublicRoute = createRouteMatcher(['/:path(*)']);
+
 export default clerkMiddleware({
-  publicRoutes: ["/:path*"]
+  publicRoutes: isPublicRoute,
 });
 
 export const config = {
-  matcher: ["/((?!.+\\.[\\w]+$|_next).*)", "/", "/(api|trpc)(.*)"],
+  matcher: ['/((?!.*\\..*|_next).*)', '/', '/(api|trpc)(.*)'],
 };
