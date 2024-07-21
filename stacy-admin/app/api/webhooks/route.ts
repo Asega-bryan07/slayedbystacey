@@ -4,9 +4,6 @@ import { connectToDB } from "@/lib/mongoDB";
 import { NextRequest, NextResponse } from "next/server";
 import { stripe } from "@/lib/stripe";
 
-// export const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY!, {
-//   typescript: true;
-// });
 
 export const POST = async (req: NextRequest) => {
   try {
