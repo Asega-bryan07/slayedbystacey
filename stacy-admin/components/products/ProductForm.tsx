@@ -24,7 +24,6 @@ import Delete from "../custom ui/Delete";
 import MultiText from "../custom ui/MultiText";
 import MultiSelect from "../custom ui/MultiSelect";
 import Loader from "../custom ui/Loader";
-import { Settings2 } from "lucide-react";
 
 const formSchema = z.object({
   title: z.string().min(2).max(20),
@@ -40,7 +39,7 @@ const formSchema = z.object({
 });
 
 interface ProductFormProps {
-  initialData?: ProductType | null; //Must have "?" to make it optional
+  initialData?: ProductType | null;
 }
 
 const ProductForm: React.FC<ProductFormProps> = ({ initialData }) => {
@@ -128,7 +127,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData }) => {
     <div className="p-10">
       {initialData ? (
         <div className="flex items-center justify-between">
-          <p className="text-heading2-bold"><Settings2 className="p-4" /> Edit Product</p>
+          <p className="text-heading2-bold">Edit Product</p>
           <Delete id={initialData._id} item="product" />
         </div>
       ) : (

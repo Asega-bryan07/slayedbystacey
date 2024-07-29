@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
@@ -11,8 +11,8 @@ const LeftSideBar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="h-screen left-0 top-0 sticky p-10 flex flex-col gap-16 bg-blue-1 shadow-lg max-lg:hidden">
-      <Image src="/logo.jpg" alt="logo" width={70} height={70} className="rounded-full" />
+    <div className="h-screen left-0 top-0 sticky p-10 flex flex-col gap-16 bg-blue-2 shadow-xl max-lg:hidden">
+      <Image src="/logo.jpg" alt="logo" width={100} height={100} className="rounded-full"/>
 
       <div className="flex flex-col gap-12">
         {navLinks.map((link) => (
@@ -20,7 +20,7 @@ const LeftSideBar = () => {
             href={link.url}
             key={link.label}
             className={`flex gap-4 text-body-medium ${
-              pathname === link.url ? "text-blue-400" : "text-grey-1"
+              pathname === link.url ? "text-blue-1" : "text-grey-1"
             }`}
           >
             {link.icon} <p>{link.label}</p>

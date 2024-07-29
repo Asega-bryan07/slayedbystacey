@@ -1,5 +1,5 @@
 import { CldUploadWidget } from "next-cloudinary";
-import { CircleFadingPlus, Trash } from "lucide-react";
+import { Plus, Trash } from "lucide-react";
 
 import { Button } from "../ui/button";
 import Image from "next/image";
@@ -44,7 +44,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
         ))}
       </div>
 
-      <CldUploadWidget uploadPreset="myyu6boo" onUpload={onUpload}>
+      <CldUploadWidget uploadPreset="rnxquapi" onUpload={onUpload}>
         {({ open }) => {
           return (
             <Button
@@ -52,7 +52,7 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
               onClick={() => open()}
               className="bg-grey-1 text-white"
             >
-              <CircleFadingPlus className="h-4 w-4 mr-2" />
+              <Plus className="h-4 w-4 mr-2" />
               Upload Image
             </Button>
           );

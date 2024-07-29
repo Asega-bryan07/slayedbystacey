@@ -29,7 +29,7 @@ export const POST = async (req: NextRequest) => {
     } = await req.json();
 
     if (!title || !description || !media || !category || !price || !expense) {
-      return new NextResponse("Not satisfied to create a product", {
+      return new NextResponse("Not enough data to create a product", {
         status: 400,
       });
     }
@@ -77,8 +77,7 @@ export const GET = async (req: NextRequest) => {
     return NextResponse.json(products, { status: 200 });
   } catch (err) {
     console.log("[products_GET]", err);
-    return new NextResponse("Internal Server Error ", { status: 500 });
+    return new NextResponse("Internal Error", { status: 500 });
   }
 };
-
 export const dynamic = "force-dynamic";
