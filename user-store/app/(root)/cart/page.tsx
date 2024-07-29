@@ -98,13 +98,13 @@ const Cart = () => {
 
       <div className="w-1/3 max-lg:w-full flex flex-col gap-8 bg-grey-1 rounded-lg px-4 py-5">
         <p className="text-heading4-bold pb-4">
-          Summary {" "}
+          Summary{" "}
           <span>{`(${cart.cartItems.length} ${
             cart.cartItems.length > 1 ? "items" : "item"
           })`}</span>
         </p>
         <div className="flex justify-between text-body-semibold">
-          <span>Total Amount </span>
+          <span>Total Amount</span>
           <span>$ {totalRounded}</span>
         </div>
         <button

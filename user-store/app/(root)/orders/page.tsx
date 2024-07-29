@@ -1,6 +1,6 @@
 import { getOrders } from "@/lib/actions/actions";
 
-import { auth } from "@clerk/nextjs/server";
+import { auth } from "@clerk/nextjs";
 import Image from "next/image";
 
 const Orders = async () => {
@@ -62,11 +62,15 @@ const Orders = async () => {
                     )}
                     <p className="text-small-medium">
                       Unit price:{" "}
-                      <span className="text-small-bold">{orderItem.product.price}</span>
+                      <span className="text-small-bold">
+                        {orderItem.product.price}
+                      </span>
                     </p>
                     <p className="text-small-medium">
                       Quantity:{" "}
-                      <span className="text-small-bold">{orderItem.quantity}</span>
+                      <span className="text-small-bold">
+                        {orderItem.quantity}
+                      </span>
                     </p>
                   </div>
                 </div>
@@ -80,5 +84,4 @@ const Orders = async () => {
 };
 
 export default Orders;
-
 export const dynamic = "force-dynamic";

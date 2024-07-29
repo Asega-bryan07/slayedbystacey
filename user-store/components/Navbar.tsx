@@ -21,15 +21,13 @@ const Navbar = () => {
   return (
     <div className="sticky top-0 z-10 py-2 px-10 flex gap-2 justify-between items-center bg-white max-sm:px-2">
       <Link href="/">
-        <Image src="/logo.png" alt="logo" width={130} height={100} />
+        <Image src="/logo.jpg" alt="logo" width={100} height={100} />
       </Link>
 
       <div className="flex gap-4 text-base-bold max-lg:hidden">
         <Link
           href="/"
-          className={`hover:text-red-1 ${
-            pathname === "/" && "text-red-1"
-          }`}
+          className={`hover:text-red-1 ${pathname === "/" && "text-red-1"}`}
         >
           Home
         </Link>
